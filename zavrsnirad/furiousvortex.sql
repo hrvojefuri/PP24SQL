@@ -54,8 +54,8 @@ create table adresadostave (
 create table placanje (
     sifra int not null primary key auto_increment,
     vrsta varchar(50) not null,
-    brojkartice char(16) not null,
-    cvv char(3) not null
+    brojkartice char(16),
+    cvv char(3)
 );
 
 create table kosarica (
