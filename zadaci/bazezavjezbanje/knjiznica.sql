@@ -6795,6 +6795,7 @@ insert into autor (sifra, ime, prezime, datumRodenja) values (20771, 'JOSIP-SVEN
 insert into autor (sifra, ime, prezime, datumRodenja) values (20772, 'AIDA', 'DOVCAK', '1979-10-24');
 insert into autor (sifra, ime, prezime, datumRodenja) values (20773, 'EVKA', 'BOKUN', '1978-11-21');
 insert into autor (sifra, ime, prezime, datumRodenja) values (20774, 'LOLITA', 'JUKIC', '1968-10-31');
+insert into autor (sifra,ime,prezime,datumrodenja) values (20775,'Hrvoje','Furi','1988-10-21');
 
 
 
