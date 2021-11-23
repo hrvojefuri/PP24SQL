@@ -67,8 +67,31 @@ alter table proizvod add foreign key (izvodac) references izvodac(sifra);
 
 # inserti u tablice 23_11_2021
 
+# 1-4
 insert into zanr values
 (null,'Heavy Metal'),
 (null,'Power Metal'),
 (null,'Thrash Metal'),
 (null,'Death Metal');
+
+# 1-4
+insert into izvodac values
+(null,'Iron Maiden','https://www.ironmaiden.com/'),
+(null,'Judas Priest','https://www.judaspriest.com/'),
+(null,'Black Sabbath','https://www.blacksabbath.com/'),
+(null,'Motorhead','https://imotorhead.com/'),
+# 5-8
+(null,'Blind Guardian','https://www.blind-guardian.com/'),
+(null,'Helloween','https://www.helloween.org/'),
+(null,'Gamma Ray','https://www.gammaray.org/en/'),
+(null,'Manowar','https://manowar.com/'),
+# 9-12
+(null,'Metallica','https://www.metallica.com/'),
+(null,'Megadeth','https://megadeth.com/'),
+(null,'Slayer','https://www.slayer.net/'),
+(null,'Anthrax','https://www.anthrax.com/'),
+# 13-16
+(null,'Morbid Angel','http://www.morbidangel.com/'),
+(null,'Entombed','https://www.entombedad.com/'),
+(null,'Suffocation','https://www.suffocationofficial.com/'),
+(null,'Obituary','https://www.obituary.cc/');
