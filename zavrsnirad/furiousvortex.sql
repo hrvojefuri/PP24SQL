@@ -56,3 +56,11 @@ create table zanr (
     sifra   int not null primary key auto_increment,
     naziv   varchar(50) not null
 );
+
+alter table narudzba add foreign key (kupac) references kupac(sifra);
+
+alter table kosarica add foreign key (narudzba) references narudzba(sifra);
+alter table kosarica add foreign key (proizvod) references proizvod(sifra);
+
+alter table proizvod add foreign key (zanr) references zanr(sifra);
+alter table proizvod add foreign key (izvodac) references izvodac(sifra);
