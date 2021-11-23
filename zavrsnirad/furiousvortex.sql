@@ -64,3 +64,11 @@ alter table kosarica add foreign key (proizvod) references proizvod(sifra);
 
 alter table proizvod add foreign key (zanr) references zanr(sifra);
 alter table proizvod add foreign key (izvodac) references izvodac(sifra);
+
+# inserti u tablice 23_11_2021
+
+insert into zanr values
+(null,'Heavy Metal'),
+(null,'Power Metal'),
+(null,'Thrash Metal'),
+(null,'Death Metal');
