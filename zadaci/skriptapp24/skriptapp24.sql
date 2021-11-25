@@ -2,7 +2,7 @@
 drop database if exists edunovapp24;
 create database edunovapp24 character set utf8;
 
-# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24SQL\zadaci\skriptapp24\skriptapp24.sql
+# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24\PP24SQL\zadaci\skriptapp24\skriptapp24.sql
 
 use edunovapp24;
 

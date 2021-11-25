@@ -1,7 +1,7 @@
 drop database if exists frizerskisalon;
 create database frizerskisalon character set utf8;
 
-# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24SQL\zadaci\frizerskisalon\frizerskisalon.sql
+# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24\PP24SQL\zadaci\frizerskisalon\frizerskisalon.sql
 
 use frizerskisalon;
 

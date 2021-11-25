@@ -1,7 +1,7 @@
 drop database if exists zupanijaopcina2;
 create database zupanijaopcina2 character set utf8;
 
-# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24SQL\zadaci\zupanijaopcina2\zupanijaopcina2.sql
+# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24\PP24SQL\zadaci\zupanijaopcina2\zupanijaopcina2.sql
 
 use zupanijaopcina2;
 
