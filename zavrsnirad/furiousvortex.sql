@@ -42,14 +42,14 @@ create table proizvod (
     naziv           varchar(50) not null,
     cijena          decimal(18,2) not null,
     izdavackakuca   varchar(50) not null,
-    naslovnica      varchar(250),
+    naslovnica      varchar(255),
     zaliha          int not null
 );
 
 create table izvodac (
     sifra   int not null primary key auto_increment,
     naziv   varchar(50) not null,
-    web     varchar(50)
+    web     varchar(255)
 );
 
 create table zanr (
