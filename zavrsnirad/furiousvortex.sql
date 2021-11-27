@@ -147,3 +147,16 @@ insert into narudzba values
 (null,1,449.97,'2021-11-03','Pouzeće','Overseas Express','2021-11-08',1),
 (null,2,299.98,'2021-11-25','Visa Classic','GLS','2021-11-29',0),
 (null,3,149.99,'2021-11-15','Diners','HP Express','2021-11-16',1);
+
+# inserti u tablicu kosarica
+
+insert into kosarica values
+# kupac 1
+(null,1,3,1,149.99),
+(null,1,5,1,149.99),
+(null,1,7,1,149.99),
+# kupac 2
+(null,2,22,1,149.99),
+(null,2,30,1,149.99),
+# kupac 3
+(null,3,9,1,149.99);
