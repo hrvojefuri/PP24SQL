@@ -42,7 +42,7 @@ create table proizvod (
     naziv           varchar(50) not null,
     cijena          decimal(18,2) not null,
     izdavackakuca   varchar(50) not null,
-    naslovnica      varchar(50),
+    naslovnica      varchar(250),
     zaliha          int not null
 );
 
