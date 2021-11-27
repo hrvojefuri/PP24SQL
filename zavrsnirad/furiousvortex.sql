@@ -140,3 +140,10 @@ insert into kupac values
 (null,'Dinko','Dinčević','Osječka ulica','6','Dubrovnik','40000','dinko.dincevic@gmail.com'),
 (null,'Marija','Maras','Zagrebačka ulica','24','Osijek','31000','marija.maras@gmail.com'),
 (null,'Ivan','Ivčević','Dubrovačka ulica','139','Zagreb','10000','ivan.ivcevic@gmail.com');
+
+# inserti u tablicu narudzba
+
+insert into narudzba values
+(null,1,449.97,'2021-11-03','Pouzeće','Overseas Express','2021-11-08',1),
+(null,2,299.98,'2021-11-25','Visa Classic','GLS','2021-11-29',0),
+(null,3,149.99,'2021-11-15','Diners','HP Express','2021-11-16',1);
