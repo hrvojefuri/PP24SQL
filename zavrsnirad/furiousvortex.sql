@@ -98,6 +98,8 @@ insert into izvodac values
 
 # inserti u tablice 27_11_2021
 
+# inserti u tablicu proizvod
+
 insert into proizvod values
 (null,1,1,'Brave New World',149.99,'Metal Blade Records','C:\Users\hrvoj\Desktop\PP24\PP24SQL\zavrsnirad\naslovnice\1.jpg',100),
 (null,1,1,'Powerslave',149.99,'Metal Blade Records','C:\Users\hrvoj\Desktop\PP24\PP24SQL\zavrsnirad\naslovnice\2.jpg',100),
@@ -131,3 +133,10 @@ insert into proizvod values
 (null,1,15,'Suffocation',149.99,'Metal Blade Records','C:\Users\hrvoj\Desktop\PP24\PP24SQL\zavrsnirad\naslovnice\30.jpg',100),
 (null,1,16,'The Erosion of Sanity',149.99,'Metal Blade Records','C:\Users\hrvoj\Desktop\PP24\PP24SQL\zavrsnirad\naslovnice\31.jpg',100),
 (null,1,16,'Cause of Death',149.99,'Metal Blade Records','C:\Users\hrvoj\Desktop\PP24\PP24SQL\zavrsnirad\naslovnice\32.jpg',100);
+
+# inserti u tablicu kupac
+
+insert into kupac values
+(null,'Dinko','Dinčević','Osječka ulica','6','Dubrovnik','40000','dinko.dincevic@gmail.com'),
+(null,'Marija','Maras','Zagrebačka ulica','24','Osijek','31000','marija.maras@gmail.com'),
+(null,'Ivan','Ivčević','Dubrovačka ulica','139','Zagreb','10000','ivan.ivcevic@gmail.com');
