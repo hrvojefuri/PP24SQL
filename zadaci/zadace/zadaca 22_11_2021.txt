@@ -1,0 +1,35 @@
+#domaća zadaća 22.11.2021.
+
+# baza knjiznica
+
+select * from autor;
+
+select * from autor where datumrodenja is null;
+
+insert into autor (sifra,ime,prezime,datumrodenja)
+values (20775,'Hrvoje','Furi','1988-10-21');
+
+select * from autor where datumrodenja='1988-10-21';
+
+select * from autor where ime='Hrvoje';
+
+select * from izdavac;
+
+select * from izdavac where naziv like '%d.o.o.';
+
+# baza world
+
+select * from country;
+
+select * from country where Continent='Europe';
+
+select * from country where Name='Croatia';
+
+select * from city where CountryCode = 'HRV';
+
+insert into city (ID,Name,CountryCode,District,Population)
+values (4080,'Donji Miholjac','HRV','Osijek-Baranja',9491);
+
+update city set Name='Špičkovina' where ID=4080;
+
+delete from city where ID=4080;

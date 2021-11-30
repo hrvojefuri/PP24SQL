@@ -1,0 +1,49 @@
+# baza edunovapp24
+
+# "Udajte" se svi i promjenite si prezime na novo željeno
+select * from polaznik;
+
+select * from osoba;
+
+select a.sifra, a.ime, a.prezime
+from osoba a
+inner join polaznik b on b.osoba=a.sifra;
+
+update osoba set prezime='Šenoa' where sifra between 2 and 21;
+
+
+
+
+# baza knjiznica
+
+#izvucite sve nazive knjiga koje su izdali ne aktivni izdavači
+select a.naslov
+from katalog a
+inner join izdavac b on a.izdavac=b.sifra
+where b.aktivan=0;
+
+
+# izvucite sve autore koji u svojim naslovima knjiga menaju slovo B
+select distinct a.ime, a.prezime
+from autor a
+inner join katalog b on a.sifra=b.autor 
+where naslov not like '%B%';
+
+
+# izvucite sve aktivne izdavače koji su izdali knjige u Zagrebu
+select a.naziv 
+from izdavac a
+inner join katalog b on b.izdavac=a.sifra
+inner join mjesto c on c.sifra=b.mjesto
+where c.naziv='Zagreb' and a.aktivan=0;
+
+
+# sakila baza
+
+# izvucite sve nazive zemalja čiji gradovi nemaju definiranu adresu
+
+select a.country
+from country a
+inner join city b on b.country_id=a.country_id
+inner join address c on c.city_id=b.city_id
+where c.address is null;
