@@ -139,3 +139,17 @@ insert into prijatelj (sifra,modelnaocala,treciputa,ekstrovertno,prviputa,svekar
 (null,'Rayban','2021-08-28',1,'2021-04-06',3);
 
 update prijatelj set treciputa='2020-04-30';
+
+
+# zadatak 2_3
+
+# U tablici brat obrišite sve zapise čija je vrijednost kolone ogrlica različito od 14.
+
+select * from brat;
+
+insert into brat (sifra,suknja,ogrlica,asocijalno,neprijatelj) values
+(null,'crvena',14,0,1),
+(null,'plava',5,1,2),
+(null,'siva',22,0,3);
+
+delete from brat where ogrlica<>14;
