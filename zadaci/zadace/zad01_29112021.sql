@@ -29,7 +29,7 @@ create table mladic (
     kuna            decimal(16,8) not null,
     drugiputa       datetime,
     asocijalno      bit,
-    ekstorvertno    bit not null,
+    ekstrovertno    bit not null,
     dukserica       varchar(48) not null,
     muskarac        int
 );
@@ -125,3 +125,20 @@ insert into sestra_svekar (sifra,sestra,svekar) values
 (null,1,1),
 (null,2,2),
 (null,3,3);
+
+# zadatak 1_3
+
+# U tablici cura postavite svim zapisima kolonu gustoca na vrijednost 15,77.
+
+select * from cura;
+select * from punac;
+
+insert into punac (sifra,ogrlica,gustoca,hlace) values
+(null,6,23.77,'jeans'),
+(null,13,153.77,'trenirka'),
+(null,6,9.77,'samt');
+
+insert into cura (sifra,novcica,gustoca,lipa,ogrlica,bojakose,suknja,punac) values
+(null,143.45,64.52,45.29,4,'crvena','kožna',1),
+(null,589.45,123.52,845.29,18,'crna','jeans',2),
+(null,4687.45,6.52,11.29,2,'smeđa','svilena',3);
