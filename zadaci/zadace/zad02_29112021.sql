@@ -160,3 +160,20 @@ delete from brat where ogrlica<>14;
 # Izlistajte suknja iz tablice cura uz uvjet da vrijednost kolone drugiputa nepoznate.
 
 select suknja from cura where drugiputa is null;
+
+
+# zadatak 2_5
+
+# Prikažite novcica iz tablice zarucnica, neprijatelj iz tablice brat te haljina iz tablice neprijatelj uz uvjet da su vrijednosti kolone
+# drugiputa iz tablice cura poznate te da su vrijednosti kolone vesta iz tablice decko sadrže niz znakova ba. Podatke posložite po haljina
+# iz tablice neprijatelj silazno.
+
+select a.novcica, f.neprijatelj, e.haljina
+from zarucnica a
+inner join decko_zarucnica b on b.zarucnica=a.sifra
+inner join decko c on c.sifra=b.decko
+inner join cura d on d.decko=c.sifra
+inner join neprijatelj e on e.cura=d.sifra
+inner join brat f on f.neprijatelj=e.sifra
+where d.drugiputa is not null and c.vesta like '%ba%'
+group by e.haljina desc;
