@@ -177,3 +177,12 @@ inner join neprijatelj e on e.cura=d.sifra
 inner join brat f on f.neprijatelj=e.sifra
 where d.drugiputa is not null and c.vesta like '%ba%'
 group by e.haljina desc;
+
+
+# zadatak 2_6
+
+# Prikažite kolone vesta i asocijalno iz tablice decko čiji se primarni ključ ne nalaze u tablici decko_zarucnica.
+
+select vesta, asocijalno
+from decko
+where sifra not in (select distinct sifra from decko_zarucnica);
