@@ -119,3 +119,23 @@ insert into decko_zarucnica (sifra,decko,zarucnica) values
 (null,1,1),
 (null,2,2),
 (null,3,3);
+
+
+# zadatak 2_2
+
+# U tablici prijatelj postavite svim zapisima kolonu treciputa na vrijednost 30. travnja 2020.
+
+select * from prijatelj;
+select* from svekar;
+
+insert into svekar (sifra,stilfrizura,ogrlica,asocijalno) values
+(null,'vojna',13,0),
+(null,'talijanka',3,1),
+(null,'duga',62,0);
+
+insert into prijatelj (sifra,modelnaocala,treciputa,ekstrovertno,prviputa,svekar) values
+(null,'Rayban','2021-07-03',0,'2021-02-26',1),
+(null,'Police','2021-10-21',0,'2021-08-13',2),
+(null,'Rayban','2021-08-28',1,'2021-04-06',3);
+
+update prijatelj set treciputa='2020-04-30';
