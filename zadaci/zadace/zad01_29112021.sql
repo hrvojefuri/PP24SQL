@@ -91,7 +91,7 @@ alter table sestra_svekar add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (svekar) references svekar(sifra);
 
 
-# zadatak 1_2
+# zadatak 1_1
 
 # U tablice muskarac, zena i sestra_svekar unesite po 3 retka.
 
@@ -128,7 +128,7 @@ insert into sestra_svekar (sifra,sestra,svekar) values
 (null,3,3);
 
 
-# zadatak 1_3
+# zadatak 1_2
 
 # U tablici cura postavite svim zapisima kolonu gustoca na vrijednost 15,77.
 
@@ -145,8 +145,10 @@ insert into cura (sifra,novcica,gustoca,lipa,ogrlica,bojakose,suknja,punac) valu
 (null,589.45,123.52,845.29,18,'crna','jeans',2),
 (null,4687.45,6.52,11.29,2,'smeđa','svilena',3);
 
+update cura set gustoca=15.77;
 
-# 1_4
+
+# 1_3
 
 # U tablici mladic obrišite sve zapise čija je vrijednost kolone kuna veće od 15,78.
 
@@ -157,12 +159,28 @@ insert into mladic (sifra,suknja,kuna,drugiputa,asocijalno,ekstrovertno,dukseric
 (null,'samt',1.32,'2021-10-21',0,1,'Nike crna',2),
 (null,'trenirka',14.32,'2021-12-28',1,1,'Puma bijela',3);
 
-
 delete from mladic where kuna>15.78;
+
+
+# 1_4
+
+# Izlistajte kratkamajica iz tablice zena uz uvjet da vrijednost kolone hlace sadrže slova ana.
+
+select kratkamajica from zena where hlace like '%ana%';
 
 
 # 1_5
 
-# Izlistajte kratkamajica iz tablice zena uz uvjet da vrijednost kolone hlace sadrže slova ana.
+# Prikažite dukserica iz tablice svekar, asocijalno iz tablice mladic te hlace iz tablice muskarac uz uvjet da su vrijednosti kolone hlace
+# iz tablice zena počinju slovom a te da su vrijednosti kolone haljina iz tablice sestra sadrže niz znakova ba. Podatke posložite po hlace
+# iz tablice muskarac silazno.
 
-select kratkamajica from zena where hlace like '%ana%'; 
+select a.dukserica, f.asocijalno, e.hlace
+from svekar a
+inner join sestra_svekar b on b.svekar=a.sifra
+inner join sestra c on c.sifra=b.sestra
+inner join zena d on d.sestra=c.sifra
+inner join muskarac e on e.zena=d.sifra
+inner join mladic f on f.muskarac=e.sifra
+where d.hlace like 'a%' and c.haljina like '%ba%'
+group by e.hlace desc;
