@@ -57,7 +57,7 @@ create table zena (
 create table svekar (
     sifra       int not null primary key auto_increment,
     bojaociju   varchar(40) not null,
-    prtena      int,
+    prstena      int,
     dukserica   varchar(41),
     lipa        decimal(13,8),
     eura        decimal(12,7),
@@ -90,3 +90,38 @@ alter table zena add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (svekar) references svekar(sifra);
 
+# zadatak 1_2
+
+# U tablice muskarac, zena i sestra_svekar unesite po 3 retka.
+
+select * from muskarac;
+select * from zena;
+select * from sestra;
+select * from sestra_svekar;
+select * from svekar;
+
+insert into sestra (sifra,introvertno,haljina,maraka,hlace,narukvica) values
+(null,0,'ljubičasta',1549.99,'tajice',7),
+(null,1,'crna',199.65,'jeans',3),
+(null,0,'cvjetna',529.99,'samt',12);
+
+insert into zena (sifra,treciputa,hlace,kratkamajica,jmbag,bojaociju,haljina,sestra) values
+(null,'2021-03-12','jeans','Tankard',12345678901,'zelena','',1),
+(null,'2021-02-23','samt','Ramones',23456789012,'smeđa','cvjetna',2),
+(null,'2021-10-03','tajice','Metallica',34567890123,'plava','',3);
+
+
+insert into muskarac (sifra,bojaociju,hlace,modelnaocala,maraka,zena) values
+(null,'plava','jeans','Police',289.99,1),
+(null,'zelena','samt','Rayban',1289.99,2),
+(null,'smeđa','trenirka','',589.99,3);
+
+insert into svekar (sifra,bojaociju,prstena,dukserica,lipa,eura,majica) values
+(null,'plava',8,'Adidas crna',149.59,56.99,'Overkill'),
+(null,'zelena',2,'Nike plava',49.59,156.99,'Metalfest'),
+(null,'smeđa',1,'Puma smeđa',1549.59,856.99,'Motorhead');
+
+insert into sestra_svekar (sifra,sestra,svekar) values
+(null,1,1),
+(null,2,2),
+(null,3,3);
