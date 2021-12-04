@@ -83,3 +83,39 @@ alter table decko_zarucnica add foreign key (decko) references decko(sifra);
 alter table decko_zarucnica add foreign key (zarucnica) references zarucnica(sifra);
 
 alter table prijatelj add foreign key (svekar) references svekar(sifra);
+
+
+# zadatak 1_1
+
+# U tablice neprijatelj, cura i decko_zarucnica unesite po 3 retka
+
+select * from neprijatelj;
+select * from cura;
+select * from decko_zarucnica;
+select * from decko;
+select * from zarucnica;
+
+insert into decko (sifra,indiferentno,vesta,asocijalno) values
+(null,0,'karirana',0),
+(null,1,'prugasta',1),
+(null,1,'šarena',1);
+
+insert into cura (sifra,haljina,drugiputa,suknja,narukvica,introvertno,majica,decko) values
+(null,'crvena','2021-03-07','plava',5,0,'Ramones',1),
+(null,'crna','2021-10-03','smeđa',13,1,'Sex Pistols',2),
+(null,'plava','2021-09-23','siva',20,1,'Anarchy',3);
+
+insert into neprijatelj (sifra,majica,haljina,lipa,modelnaocala,kuna,jmbag,cura) values
+(null,'Metallica','crna',149.86,'Rayban',364.28,'12345678901',1),
+(null,'Tankard','plava',5149.86,'Police',4.28,'23456789012',2),
+(null,'Pantera','siva',49.86,'Rayban',1364.28,'34567890123',3);
+
+insert into zarucnica (sifra,narukvica,bojakose,novcica,lipa,indiferentno) values
+(null,2,'crvena',154.73,2648.52,0),
+(null,15,'smeđa',1254.73,648.52,1),
+(null,26,'crna',14.73,28.52,1);
+
+insert into decko_zarucnica (sifra,decko,zarucnica) values
+(null,1,1),
+(null,2,2),
+(null,3,3);
