@@ -153,3 +153,10 @@ insert into brat (sifra,suknja,ogrlica,asocijalno,neprijatelj) values
 (null,'siva',22,0,3);
 
 delete from brat where ogrlica<>14;
+
+
+# zadatak 2_4
+
+# Izlistajte suknja iz tablice cura uz uvjet da vrijednost kolone drugiputa nepoznate.
+
+select suknja from cura where drugiputa is null;
