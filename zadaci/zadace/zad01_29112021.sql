@@ -90,6 +90,7 @@ alter table zena add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (svekar) references svekar(sifra);
 
+
 # zadatak 1_2
 
 # U tablice muskarac, zena i sestra_svekar unesite po 3 retka.
@@ -126,6 +127,7 @@ insert into sestra_svekar (sifra,sestra,svekar) values
 (null,2,2),
 (null,3,3);
 
+
 # zadatak 1_3
 
 # U tablici cura postavite svim zapisima kolonu gustoca na vrijednost 15,77.
@@ -143,6 +145,7 @@ insert into cura (sifra,novcica,gustoca,lipa,ogrlica,bojakose,suknja,punac) valu
 (null,589.45,123.52,845.29,18,'crna','jeans',2),
 (null,4687.45,6.52,11.29,2,'smeđa','svilena',3);
 
+
 # 1_4
 
 # U tablici mladic obrišite sve zapise čija je vrijednost kolone kuna veće od 15,78.
@@ -156,3 +159,10 @@ insert into mladic (sifra,suknja,kuna,drugiputa,asocijalno,ekstrovertno,dukseric
 
 
 delete from mladic where kuna>15.78;
+
+
+# 1_5
+
+# Izlistajte kratkamajica iz tablice zena uz uvjet da vrijednost kolone hlace sadrže slova ana.
+
+select kratkamajica from zena where hlace like '%ana%'; 
