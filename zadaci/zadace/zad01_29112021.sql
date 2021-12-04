@@ -142,3 +142,17 @@ insert into cura (sifra,novcica,gustoca,lipa,ogrlica,bojakose,suknja,punac) valu
 (null,143.45,64.52,45.29,4,'crvena','kožna',1),
 (null,589.45,123.52,845.29,18,'crna','jeans',2),
 (null,4687.45,6.52,11.29,2,'smeđa','svilena',3);
+
+# 1_4
+
+# U tablici mladic obrišite sve zapise čija je vrijednost kolone kuna veće od 15,78.
+
+select * from mladic;
+
+insert into mladic (sifra,suknja,kuna,drugiputa,asocijalno,ekstrovertno,dukserica,muskarac) values
+(null,'jeans',1469.32,'2021-07-03',1,0,'Adidas plava',1),
+(null,'samt',1.32,'2021-10-21',0,1,'Nike crna',2),
+(null,'trenirka',14.32,'2021-12-28',1,1,'Puma bijela',3);
+
+
+delete from mladic where kuna>15.78;
