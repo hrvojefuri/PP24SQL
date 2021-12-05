@@ -80,3 +80,39 @@ alter table zena_mladic add foreign key (zena) references zena(sifra);
 alter table zena_mladic add foreign key (mladic) references mladic(sifra);
 
 alter table punac add foreign key (ostavljen) references ostavljen(sifra);
+
+
+# zadatak 4_1
+
+# tablice becar, snasa i zena_mladic unesite po 3 retka.
+
+select * from becar;
+select * from snasa;
+select * from zena_mladic;
+select * from mladic;
+select * from zena;
+
+insert into zena(sifra,suknja,lipa,prstena) values
+(null,'crvena',164.79,12),
+(null,'žuta',64.79,1),
+(null,'plava',1264.79,52);
+
+insert into mladic (sifra,kuna,lipa,nausnica,stilfrizura,vesta) values
+(null,1824.61,529.88,15,'vojna','siva'),
+(null,824.61,59.88,5,'talijanka','crna'),
+(null,84.61,5.88,25,'duga','plava');
+
+insert into zena_mladic (sifra,zena,mladic) values
+(null,1,1),
+(null,2,2),
+(null,3,3);
+
+insert into snasa (sifra,introvertno,treciputa,haljina,zena) values
+(null,1,'2021-08-09','crvena',1),
+(null,0,'2021-05-21','plava',2),
+(null,0,'2021-01-17','žuta',3);
+
+insert into becar (sifra,novcica,kratkamajica,bojaociju,snasa) values
+(null,154.90,'Overkill','plava',1),
+(null,14.90,'Metallica','smeđa',2),
+(null,1524.90,'Tankard','zelena',3);
