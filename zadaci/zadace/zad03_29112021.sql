@@ -147,3 +147,12 @@ update svekar set suknja='Osijek';
 # U tablici punica obrišite sve zapise čija je vrijednost kolone kratkamajica jednako AB.
 
 delete from punica where kratkamajica = 'AB';
+
+
+# zadatak 3_4
+
+# Izlistajte majica iz tablice ostavljena uz uvjet da vrijednost kolone lipa nije 9,10,20,30 ili 35.
+
+select majica 
+from ostavljena 
+where lipa not in ('9','10','20','30','35'); 
