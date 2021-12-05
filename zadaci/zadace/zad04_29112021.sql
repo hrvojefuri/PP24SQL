@@ -174,3 +174,9 @@ inner join becar e on e.snasa=d.sifra
 inner join prijatelj f on f.becar=e.sifra
 where d.treciputa is not null and c.lipa != 29
 order by e.kratkamajica desc;
+
+# zadatak 4_6
+
+# Prikažite kolone lipa i prstena iz tablice zena čiji se primarni ključ ne nalaze u tablici zena_mladic.
+
+select lipa, prstena from zena where sifra not in (select distinct sifra from zena_mladic);
