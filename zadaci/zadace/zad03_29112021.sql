@@ -1,9 +1,9 @@
-drop database if exists zad0_29112021;
-create database zad0_29112021;
+drop database if exists zad03_29112021;
+create database zad03_29112021;
 
 # c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24\PP24SQL\zadaci\zadace\zad0_29112021.sql
 
-use zad0_29112021;
+use zad03_29112021;
 
 create table brat (
     sifra           int not null primary key auto_increment,
