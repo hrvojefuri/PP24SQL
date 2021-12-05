@@ -116,3 +116,23 @@ insert into becar (sifra,novcica,kratkamajica,bojaociju,snasa) values
 (null,154.90,'Overkill','plava',1),
 (null,14.90,'Metallica','smeđa',2),
 (null,1524.90,'Tankard','zelena',3);
+
+
+# zadatak 4_2
+
+# U tablici punac postavite svim zapisima kolonu majica na vrijednost Osijek.
+
+select * from punac;
+select * from ostavljen;
+
+insert into ostavljen (sifra,modelnaocala,introvertno,kuna) values
+(null,'Rayban',0,154.62),
+(null,'Police',1,54.62),
+(null,'Police',1,1254.62);
+
+insert into punac (sifra,treciputa,majica,jmbag,novcica,maraka,ostavljen) values
+(null,'2021-10-21','Sodom','12345678901',154.37,621.15,1),
+(null,'2021-12-27','Destruction','23456789012',54.37,61.15,2),
+(null,'2021-07-03','Tankard','34567890123',4.37,6.15,3);
+
+update punac set majica='Osijek';
