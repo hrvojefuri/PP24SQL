@@ -150,3 +150,10 @@ insert into prijatelj (sifra,eura,prstena,gustoca,jmbag,suknja,becar) values
 (null,1280.19,36,182.4,'34567890123','siva',3);
 
 delete from prijatelj where prstena > 17;
+
+
+# zadatak 4_4
+
+# Izlistajte haljina iz tablice snasa uz uvjet da vrijednost kolone treciputa nepoznate.
+
+select haljina from snasa where treciputa is null;
