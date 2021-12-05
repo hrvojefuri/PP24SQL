@@ -136,3 +136,17 @@ insert into punac (sifra,treciputa,majica,jmbag,novcica,maraka,ostavljen) values
 (null,'2021-07-03','Tankard','34567890123',4.37,6.15,3);
 
 update punac set majica='Osijek';
+
+
+# zadatak 4_3
+
+# U tablici prijatelj obrišite sve zapise čija je vrijednost kolone prstena veće od 17.
+
+select * from prijatelj;
+
+insert into prijatelj (sifra,eura,prstena,gustoca,jmbag,suknja,becar) values
+(null,128.19,24,82.4,'12345678901','crvena',1),
+(null,18.19,2,182.4,'23456789012','plava',2),
+(null,1280.19,36,182.4,'34567890123','siva',3);
+
+delete from prijatelj where prstena > 17;
