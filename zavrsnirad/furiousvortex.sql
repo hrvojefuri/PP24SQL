@@ -67,14 +67,14 @@ alter table proizvod add foreign key (izvodac) references izvodac(sifra);
 # inserti u tablice 23_11_2021
 
 # 1-4
-insert into zanr values
+insert into zanr (sifra,naziv) values
 (null,'Heavy Metal'),
 (null,'Power Metal'),
 (null,'Thrash Metal'),
 (null,'Death Metal');
 
 # 1-4
-insert into izvodac values
+insert into izvodac (sifra,naziv,web) values
 (null,'Iron Maiden','https://www.ironmaiden.com/'),
 (null,'Judas Priest','https://www.judaspriest.com/'),
 (null,'Black Sabbath','https://www.blacksabbath.com/'),
@@ -99,7 +99,7 @@ insert into izvodac values
 
 # inserti u tablicu proizvod
 
-insert into proizvod values
+insert into proizvod (sifra,zanr,izvodac,naziv,cijena,izdavackakuca,zaliha) values
 (null,1,1,'Brave New World',149.99,'Metal Blade Records',100),
 (null,1,1,'Powerslave',149.99,'Metal Blade Records',100),
 (null,1,2,'Sad Wings Of Destiny',149.99,'Roadrunner Records',100),
@@ -135,21 +135,21 @@ insert into proizvod values
 
 # inserti u tablicu kupac
 
-insert into kupac values
+insert into kupac (sifra,ime,prezime,ulica,kucnibroj,grad,postanskibroj,email) values
 (null,'Dinko','Dinčević','Osječka ulica','6','Dubrovnik','40000','dinko.dincevic@gmail.com'),
 (null,'Marija','Maras','Zagrebačka ulica','24','Osijek','31000','marija.maras@gmail.com'),
 (null,'Ivan','Ivčević','Dubrovačka ulica','139','Zagreb','10000','ivan.ivcevic@gmail.com');
 
 # inserti u tablicu narudzba
 
-insert into narudzba values
+insert into narudzba (sifra,kupac,iznos,datumnarudzbe,nacinplacanja,dostavnasluzba,datumdostave,isporuceno) values
 (null,1,449.97,'2021-11-03','Pouzeće','Overseas Express','2021-11-08',1),
 (null,2,299.98,'2021-11-25','Visa Classic','GLS','2021-11-29',0),
 (null,3,149.99,'2021-11-15','Diners','HP Express','2021-11-16',1);
 
 # inserti u tablicu kosarica
 
-insert into kosarica values
+insert into kosarica (sifra,narudzba,proizvod,kolicina,cijena) values
 # kupac 1
 (null,1,3,1,149.99),
 (null,1,5,1,149.99),
