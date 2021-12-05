@@ -84,3 +84,39 @@ alter table snasa add foreign key (ostavljena) references ostavljena(sifra);
 alter table punica add foreign key (snasa) references snasa(sifra);
 
 alter table svekar add foreign key (cura) references cura(sifra);
+
+
+# zadatak 3_1
+
+# U tablice snasa, ostavljena i prijatelj_brat unesite po 3 retka.
+
+select * from snasa;
+select * from ostavljena;
+select * from prijatelj;
+select * from brat;
+select * from prijatelj_brat;
+
+insert into prijatelj (sifra,kuna,haljina,lipa,dukserica,indiferentno) values
+(null,1987.56,'crvena',168.97,'Adidas crna',1),
+(null,15.56,'plava',68.97,'Nike plava',0),
+(null,187.56,'žuta',16.97,'Puma siva',1);
+
+insert into brat (sifra,jmbag,ogrlica,ekstrovertno) values
+(null,'12345678901',153,0),
+(null,'23456789012',13,1),
+(null,'34567890123',3,0);
+
+insert into prijatelj_brat (sifra,prijatelj,brat) values
+(null,1,1),
+(null,2,2),
+(null,3,3);
+
+insert into ostavljena (sifra,kuna,lipa,majica,modelnaocala,prijatelj) values
+(null,1549.27,826.15,'crvena','Rayban',1),
+(null,149.27,86.15,'plava','Police',2),
+(null,19.27,1826.15,'žuta','Rayban',1);
+
+insert into snasa (sifra,introvertno,kuna,eura,treciputa,ostavljena) values
+(null,0,128.17,623.49,'2021-04-15',1),
+(null,1,18.17,23.49,'2021-10-30',2),
+(null,1,1258.17,23.49,'2021-07-22',3);
