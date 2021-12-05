@@ -120,3 +120,23 @@ insert into snasa (sifra,introvertno,kuna,eura,treciputa,ostavljena) values
 (null,0,128.17,623.49,'2021-04-15',1),
 (null,1,18.17,23.49,'2021-10-30',2),
 (null,1,1258.17,23.49,'2021-07-22',3);
+
+
+# zadatak 3_2
+
+# U tablici svekar postavite svim zapisima kolonu suknja na vrijednost Osijek.
+
+select * from svekar;
+select * from cura;
+
+insert into cura (sifra,dukserica,maraka,drugiputa,majica,novcica,ogrlica) values
+(null,'Adidas crna',153.87,'2021-02-23','Ramones',269.13,26),
+(null,'Nike plava',2153.87,'2021-03-07','Sank',1269.13,6),
+(null,'Puma siva',53.87,'2021-10-20','Mortal Kombat',9.13,16);
+
+insert into svekar (sifra,novcica,suknja,bojakose,prstena,narukvica,cura) values
+(null,156.18,'plava','crna',15,3,1),
+(null,56.18,'crvena','smeđa',5,23,2),
+(null,1356.18,'siva','crvena',35,18,3);
+
+update svekar set suknja='Osijek';
