@@ -140,3 +140,10 @@ insert into svekar (sifra,novcica,suknja,bojakose,prstena,narukvica,cura) values
 (null,1356.18,'siva','crvena',35,18,3);
 
 update svekar set suknja='Osijek';
+
+
+# zadatak 3_3
+
+# U tablici punica obrišite sve zapise čija je vrijednost kolone kratkamajica jednako AB.
+
+delete from punica where kratkamajica = 'AB';
