@@ -1,7 +1,8 @@
 drop database if exists furiousvortex;
 create database furiousvortex;
 
-# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 < C:\Users\hrvoj\Desktop\PP24\PP24SQL\zavrsnirad\furiousvortex.sql
+# c:\xampp\mysql\bin -uedunova -pedunova --default_character_set=utf8 <     
+
 
 use furiousvortex;
 
@@ -10,9 +11,9 @@ create table kupac (
     ime             varchar(50) not null,
     prezime         varchar(50) not null,
     ulica           varchar(50) not null,
-    kucnibroj       varchar(5) not null,
+    kucniBroj       varchar(5) not null,
     grad            varchar(50) not null,
-    postanskibroj   char(5) not null,
+    postanskiBroj   char(5) not null,
     email           varchar(50)
 );
 
@@ -20,10 +21,10 @@ create table narudzba (
     sifra           int not null primary key auto_increment,
     kupac           int not null,
     iznos           decimal(18,2) not null,
-    datumnarudzbe   datetime not null,
-    nacinplacanja   varchar(50) not null,
-    dostavnasluzba  varchar(50) not null,
-    datumdostave    datetime,
+    datumNarudzbe   datetime not null,
+    nacinPlacanja   varchar(50) not null,
+    dostavnaSluzba  varchar(50) not null,
+    datumDostave    datetime,
     isporuceno      boolean
 );
 
@@ -41,7 +42,7 @@ create table proizvod (
     izvodac         int not null,
     naziv           varchar(50) not null,
     cijena          decimal(18,2) not null,
-    izdavackakuca   varchar(50) not null,
+    izdavackaKuca   varchar(50) not null,
     zaliha          int not null
 );
 
