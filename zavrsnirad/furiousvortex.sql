@@ -100,7 +100,7 @@ insert into izvodac (sifra,naziv,web) values
 
 # inserti u tablicu proizvod
 
-insert into proizvod (sifra,zanr,izvodac,naziv,cijena,izdavackakuca,zaliha) values
+insert into proizvod (sifra,zanr,izvodac,naziv,cijena,izdavackaKuca,zaliha) values
 (null,1,1,'Brave New World',149.99,'Metal Blade Records',100),
 (null,1,1,'Powerslave',149.99,'Metal Blade Records',100),
 (null,1,2,'Sad Wings Of Destiny',149.99,'Roadrunner Records',100),
@@ -136,14 +136,14 @@ insert into proizvod (sifra,zanr,izvodac,naziv,cijena,izdavackakuca,zaliha) valu
 
 # inserti u tablicu kupac
 
-insert into kupac (sifra,ime,prezime,ulica,kucnibroj,grad,postanskibroj,email) values
+insert into kupac (sifra,ime,prezime,ulica,kucniBroj,grad,postanskiBroj,email) values
 (null,'Dinko','Dinčević','Osječka ulica','6','Dubrovnik','40000','dinko.dincevic@gmail.com'),
 (null,'Marija','Maras','Zagrebačka ulica','24','Osijek','31000','marija.maras@gmail.com'),
 (null,'Ivan','Ivčević','Dubrovačka ulica','139','Zagreb','10000','ivan.ivcevic@gmail.com');
 
 # inserti u tablicu narudzba
 
-insert into narudzba (sifra,kupac,iznos,datumnarudzbe,nacinplacanja,dostavnasluzba,datumdostave,isporuceno) values
+insert into narudzba (sifra,kupac,iznos,datumNarudzbe,nacinPlacanja,dostavnaSluzba,datumDostave,isporuceno) values
 (null,1,449.97,'2021-11-03','Pouzeće','Overseas Express','2021-11-08',1),
 (null,2,299.98,'2021-11-25','Visa Classic','GLS','2021-11-29',0),
 (null,3,149.99,'2021-11-15','Diners','HP Express','2021-11-16',1);
